@@ -13,7 +13,6 @@ setup(
   long_description=open('README.rst').read(),
   description='An implementation of the rHEALPix discrete global grid system',
   install_requires=[
-    'python >= 3.3',
     'numpy >= 1.7',
     'scipy >= 0.12', 
     'matplotlib >= 1.2.1', 
