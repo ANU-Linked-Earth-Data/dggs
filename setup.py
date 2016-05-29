@@ -12,7 +12,7 @@ setup(
   license='LICENSE.txt',
   long_description=open('README.rst').read(),
   description='An implementation of the rHEALPix discrete global grid system',
-  setup_requires=[
+  install_requires=[
     'numpy>=1.11.0',
     'matplotlib>=1.5.1',
     'pyproj>=1.9.5',

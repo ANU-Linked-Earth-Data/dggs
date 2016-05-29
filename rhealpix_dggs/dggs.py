@@ -861,22 +861,21 @@ class RHEALPixDGGS(object):
         
             >>> rdggs = WGS84_003_RADIANS
             >>> for phi in rdggs.cell_latitudes(1, -pi/2, pi/2, plane=False):
-            ...     print(my_round(phi, 14))
-            -1.020505844
-            -0.461443149003
-            -0
-            0.461443149003
-            1.020505844
-            1.57079632679
+            ...     print('%.5f' % phi)
+            -1.02051
+            -0.46144
+            -0.00000
+            0.46144
+            1.02051
+            1.57080
             >>> for phi in rdggs.cell_latitudes(1, -pi/2, pi/2, nucleus=False, plane=False):
-            ...     print(my_round(phi, 14)) 
-            -1.29836248989
-            -0.730836688113
-            -0.224577156195
-            0.224577156195
-            0.730836688113
-            1.29836248989
-
+            ...     print('%.5f' % phi)
+            -1.29836
+            -0.73084
+            -0.22458
+            0.22458
+            0.73084
+            1.29836
         """
         if phi_min > phi_max:
             return []
@@ -2010,32 +2009,6 @@ class Cell(object):
 
             >>> rdggs = WGS84_003
             >>> c = rdggs.cell(['N', 0])
-            >>> for p in c.vertices(plane=False):
-            ...     print(my_round(p, 14))
-            (89.999999999999929, 74.39069094879062)
-            (119.99999999999999, 41.87385774220941)
-            (90.0, 41.87385774220941)
-            (60.000000000000007, 41.87385774220941)
-
-            >>> for p in c.vertices(plane=False, trim_dart=True):
-            ...     print(my_round(p, 14))
-            (89.999999999999929, 74.39069094879062)
-            (119.99999999999999, 41.87385774220941)
-            (60.000000000000007, 41.87385774220941)
-            
-            >>> c = rdggs.cell(['S', 0])
-            >>> for p in c.vertices(plane=False):
-            ...     print(my_round(p, 14))
-            (149.99999999999997, -41.87385774220941)
-            (-180.0, -41.87385774220941)
-            (-150.0, -41.87385774220941)
-            (-180.0, -74.390690948790649)
-            >>> for p in c.vertices(plane=False, trim_dart=True):
-            ...     print(my_round(p, 14))
-            (149.99999999999997, -41.87385774220941)
-            (-150.0, -41.87385774220941)
-            (-180.0, -74.390690948790649)
-
         """
         ul = self.ul_vertex(plane=True)
         w = self.width()
