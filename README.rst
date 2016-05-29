@@ -2,7 +2,9 @@ Introduction
 ============
 rHEALPixDGGS is a Python 3.3 package that implements the rHEALPix discrete global grid system (DGGS).
 
-[![Build Status](https://travis-ci.org/ANU-Linked-Earth-Data/dggs.svg?branch=master)](https://travis-ci.org/ANU-Linked-Earth-Data/dggs)
+.. image:: https://travis-ci.org/ANU-Linked-Earth-Data/dggs.svg?branch=master
+   :alt: Build Status
+   :target: https://travis-ci.org/ANU-Linked-Earth-Data/dggs
 
 Requirements 
 -------------
