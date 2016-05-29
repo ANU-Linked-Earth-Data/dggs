@@ -1,5 +1,15 @@
 language: python
 python:
   - 3.5
+addons:
+apt:
+  packages:
+  - libatlas-dev
+  - libatlas-base-dev
+  - liblapack-dev
+  - gfortran
+  - libgmp-dev
+  - libmpfr-dev
+  - ccache
 install: pip install -e .
 script: python run_all_tests.py
