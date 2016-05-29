@@ -1,1 +1,4 @@
 rHEALPixDGGS.egg-info/
+.eggs/
+*.pyc
+*.swp
